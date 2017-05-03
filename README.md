@@ -2,6 +2,9 @@
 
 Simple program to find optimal shop for your baby shopping list.
 
+[![Code Climate](https://codeclimate.com/github/singhpratyush/baby-shopper/badges/gpa.svg)](https://codeclimate.com/github/singhpratyush/baby-shopper)
+
+
 ### Requirements
 `python>=3.5`
 
