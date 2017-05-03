@@ -15,7 +15,7 @@ def main() -> None:
 
     # Load data and create index
     items = data.read_data(filename)
-    item_index = index.build_index(items)
+    item_index, shop_index = index.build_index(items)
 
     # Find relevant shops
     shops = utils.find_shops(item_index, products)
@@ -27,7 +27,7 @@ def main() -> None:
     #       (shop2, total2),
     #       ...
     #  ]
-    price_list = [(i, utils.calculate_price(item_index, products, i))
+    price_list = [(i, utils.calculate_price(shop_index, products, i))
                   for i in shops]
 
     if price_list:
