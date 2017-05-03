@@ -20,3 +20,8 @@ in exact order.
 
 If the CSV has a header, modify the call to `data.read_data()` in `shopper.py` indicating argument 1 as `True`.
 
+
+<br/><br/>
+
+---
+Created as a solution to challenge by DataOne Innovation Labs.
