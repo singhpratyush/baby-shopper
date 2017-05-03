@@ -23,10 +23,10 @@ def calculate_price(index: dict, products: list, shop: int) -> float:
     :return: Best price
     """
     price = 0.
-    while products:  # While we do not have taken all the products
-        i = products[0]  # Pick a product
+    cp = list(products)  # Create a copy of products to avoid memory reference
+    while cp:  # While we do not have taken all the products
+        i = cp[0]  # Pick a product
         prices = []
-
         # Check for its price in all type of packages
         for j in index[shop]:
             if i in j[1][0]:
@@ -36,7 +36,7 @@ def calculate_price(index: dict, products: list, shop: int) -> float:
         best_price = min(prices)
         price += best_price[0]
         for k in best_price[1]:
-            if k in products:
-                products.remove(k)  # Get all required items from the package
+            if k in cp:
+                cp.remove(k)  # Get all required items from the package
 
     return price
